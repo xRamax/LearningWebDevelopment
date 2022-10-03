@@ -1,0 +1,22 @@
+#calculadoraBg{
+    height: 420px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#calculadoraBg form{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+
+#display{
+
+    width: 100%;
+}
+
+input[type = button]{
+    border: 1px solid black;
+    border-radius: 100%;
+}
