@@ -1,22 +1,90 @@
-#calculadoraBg{
-    height: 420px;
-    width: 300px;
-    border: 1px solid black;
-    border-radius: 5px;
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
 }
 
-#calculadoraBg form{
-    height: 100%;
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 15px;
+   
+}
+
+.calculator{
+
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    /* border: 1px solid black;
+    border-radius: 10px; */
+    background-color: red;
+}
+
+
+.calculator-display{
+
+    padding: 25px 15px;
     width: 100%;
+    height: 200px;
+    text-align: right;
+    overflow-x: auto;
+    /* border-top-left-radius: 10px;
+    border-top-right-radius: 10px; */
     background-color: black;
+    border: 1px solid grey;
+    color: white;
+    font-size: xx-large;
 }
 
-#display{
 
+.calculator-keypad{
+    display: flex;
     width: 100%;
 }
 
-input[type = button]{
-    border: 1px solid black;
-    border-radius: 100%;
+.keypad-numbers{
+
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
 }
+
+.keypad-button {
+    width: 25%;
+    padding: 15px 0;
+    text-align: center;
+    cursor: pointer;
+    background-color: #333333;
+}
+
+.keypad-button:hover {
+
+    opacity: 0.7;
+    transition: opacity 0.5s;
+}
+
+.keypad-button.large{
+    width: 50%;
+}
+
+.keypad-button.operator{
+
+    background-color: #FEA108;
+}
+
+.keypad-button.special{
+
+    background-color: #A5A5A5;
+}
+
+.keypad-button.number{
+    color: white;
+}
+
+

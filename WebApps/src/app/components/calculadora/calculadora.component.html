@@ -1,29 +1,35 @@
 <body>
     <h1>Calculadora</h1>
-    <div id="calculadoraBg">
-    <form id="calculator">
-        <input type="text" id="display" value="" autocomplete="off" readonly>
+    <div class="container">
+        <div class="calculator">
+            <input type="text" class="calculator-display" value="{{result}}" readonly disabled>
+            <div class="calculator-keypad"></div>
+                <div class="keypad-numbers">
 
-        <input type="button" value="7" id="ola">
-        <input type="button" value="8">
-        <input type="button" value="9">
-        <input type="button" value="+">
-        <br>
-        <input type="button" value="4">
-        <input type="button" value="5">
-        <input type="button" value="6">
-        <input type="button" value="-">
-        <br>
-        <input type="button" value="1">
-        <input type="button" value="2">
-        <input type="button" value="3">
-        <input type="button" value="X">
-        <br>
-        <input type="button" value="0">
-        <input type="button" value="C">
-        <input type="button" value="=">
-        <input type="button" value="/">
-    </form>
-</div>
+                    <div class="keypad-button special large" (click)="addToExpression('AC')">AC</div>
+                    <div class="keypad-button special" (click)="addToExpression('%')">%</div>
+                    <div class="keypad-button operator" (click)="addToExpression('/')">/</div>
+                    
+                    <div class="keypad-button number" (click)="addToExpression('7')">7</div>
+                    <div class="keypad-button number" (click)="addToExpression('8')">8</div>
+                    <div class="keypad-button number" (click)="addToExpression('9')">9</div>
+                    <div class="keypad-button operator" (click)="addToExpression('*')">X</div>
 
+                    <div class="keypad-button number" (click)="addToExpression('4')">4</div>
+                    <div class="keypad-button number" (click)="addToExpression('5')">5</div>
+                    <div class="keypad-button number" (click)="addToExpression('6')">6</div>
+                    <div class="keypad-button operator" (click)="addToExpression('-')">-</div>
+
+                    <div class="keypad-button number" (click)="addToExpression('1')">1</div>
+                    <div class="keypad-button number" (click)="addToExpression('2')">2</div>
+                    <div class="keypad-button number" (click)="addToExpression('3')">3</div>
+                    <div class="keypad-button operator" (click)="addToExpression('+')">+</div>
+
+                    <div class="keypad-button number large" style="border-bottom-left-radius: 10px;" (click)="addToExpression('0')">0</div>
+                    <div class="keypad-button number" (click)="addToExpression"(click)="addToExpression('.')">.</div>
+                    <div class="keypad-button operator"  style="border-bottom-right-radius: 10px;" (click)="addToExpression('=')">=</div>
+
+                </div>
+        </div>
+    </div>
 </body>
