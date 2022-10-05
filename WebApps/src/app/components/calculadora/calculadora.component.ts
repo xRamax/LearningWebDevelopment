@@ -25,6 +25,10 @@ export class CalculadoraComponent implements OnInit {
       case 'AC':
         this.result = '';
         break;
+      
+      case 'CE':
+        this.result = this.prevValue != '='? this.result.slice(0, -1): this.result;
+        break;
 
       case '=':
         this.result = eval(this.result);
