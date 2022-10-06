@@ -7,7 +7,9 @@
                 <div class="keypad-numbers">
 
                     <div class="keypad-button special large" (click)="addToExpression('AC')">AC</div>
-                    <div class="keypad-button special" (click)="addToExpression('CE')">CE</div>
+                    <div class="keypad-button special" (click)="addToExpression('CE')">
+                        <i class="fa-solid fa-delete-left"></i>                        
+                    </div>
                     <div class="keypad-button operator" (click)="addToExpression('/')">/</div>
                     
                     <div class="keypad-button number" (click)="addToExpression('7')">7</div>

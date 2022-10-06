@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { APP_BASE_HREF } from '@angular/common';
+// import { } from '@fortawesome/fontawesome-free';
 
 import { AppRoutingModule } from './app-routing.module';
 import { RouterModule } from '@angular/router';

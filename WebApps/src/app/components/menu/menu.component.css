@@ -1,7 +1,14 @@
 #logo{
     margin-left: 10px;
+    margin-bottom: -20px;
+    font-size: x-large;
 }
 
 .nav-item{
     margin-left: 5px;
+}
+
+.small{
+    font-size: small;
+    text-align: right;
 }

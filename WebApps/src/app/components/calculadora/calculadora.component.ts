@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { BrowserTransferStateModule } from '@angular/platform-browser';
 
 
+
 @Component({
   selector: 'app-calculadora',
   templateUrl: './calculadora.component.html',
