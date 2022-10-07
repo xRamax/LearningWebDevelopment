@@ -13,7 +13,6 @@
     align-items: center;
     height: 80vh;
     padding: 15px;
-   
 }
 
 .calculator{
@@ -21,8 +20,10 @@
     display: flex;
     flex-direction: column;
     width: 500px;
-    /* border: 1px solid black;
-    border-radius: 10px; */
+    padding: 0px;
+    /* border: 3px solid black; */
+    border-radius: 30px;
+    box-shadow: 8px 3px 1px 1px pink;
 }
 
 
@@ -33,12 +34,13 @@
     height: 200px;
     text-align: right;
     overflow-x: auto;
-    /* border-top-left-radius: 10px;
-    border-top-right-radius: 10px; */
-    background-color: black;
-    border: 1px solid grey;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color:#E9AAB2;
     color: white;
     font-size: xx-large;
+    border: 3px solid black;
+    padding: 0px;
 }
 
 
@@ -52,6 +54,11 @@
     display: flex;
     width: 100%;
     flex-wrap: wrap;
+    border-radius: 30px;
+    border: 3px solid black;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top: none;
 }
 
 .keypad-button {
@@ -59,13 +66,14 @@
     padding: 15px 0;
     text-align: center;
     cursor: pointer;
-    background-color: #333333;
+    background-color: #F6F6F6;
 }
 
 .keypad-button:hover {
-
-    opacity: 0.7;
-    transition: opacity 0.5s;
+    
+    background-color: #A5A5A5;
+    opacity: 0.65;
+    transition: opacity 0.35s, background-color 0.35s;
 }
 
 .keypad-button.large{
@@ -74,7 +82,7 @@
 
 .keypad-button.operator{
 
-    background-color: #FEA108;
+    background-color: #FD3690;
 }
 
 .keypad-button.special{
@@ -82,8 +90,22 @@
     background-color: #A5A5A5;
 }
 
+
+
+
 .keypad-button.number{
-    color: white;
+    color: black;
 }
 
+
+
+.border-bottom-left-button{
+
+    border-bottom-left-radius: 30px;
+}
+
+.border-bottom-right-button{
+
+    border-bottom-right-radius: 30px;
+}
 
