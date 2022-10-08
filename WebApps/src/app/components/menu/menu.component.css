@@ -12,3 +12,13 @@
     font-size: small;
     text-align: right;
 }
+
+.nav-link.btn{
+
+    color: black;
+}
+
+.nav-link.btn:hover{
+
+    color: rgb(250, 250, 250)
+}

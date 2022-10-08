@@ -1,17 +1,27 @@
-<h3>ArticulosFamilias</h3>
-<div>
-<table class="table table-bordered table-striped">
-<tr>
-<th class="text-center">IdArticuloFamilia</th>
-<th class="text-center">Nombre</th>
-</tr>
-<tr>
-<td>1</td>
-<td>Accesorios</td>
-</tr>
-<tr>
-<td>2</td>
-<td>Audio</td>
-</tr>
-</table>
+<div class="container mainContainer roundBorder">
+    <div class="dateHeader">
+        <div class="dateRight">
+            <div id="dateDayNumber"></div>
+            <div id="dateMonth&Year">
+                <span id="dateMonth"></span>
+                <span id="dateYear"></span>
+            </div>
+        </div>
+        <div class="dateLeft"></div>
+            <span id="dateDayName"></span>
+    </div>
+    <form name="FormRegistro" [formGroup]="FormRegistro">
+        <input type="text" name="taskText" autocomplete="off" class="roundBorder form-control" formControlName="Nombre"placeholder="Nueva tarea..." ngModel="nombreTarea" id="task">
+        <!-- <button type="submit" class="btn btn-info addTaskButton" [disabled]="!nombreTarea" (click)="PostTarea('#task.value')">+</button> -->
+        <button type="button" class="orderButton btn btn-warning roundBorder">Ordenar</button>
+    </form>
+    <div id="taskContainer">
+            <ul>
+                <li *ngFor="let tarea of tareas">
+                    <!-- <input ngModel = "tarea.terminada" (change)="cambiarEstadoTarea()" type="checkbox"> -->
+                    <div *ngIf="tarea.Terminada == false">{{tarea.Nombre}}</div>
+                <!-- <a (click)="eliminarTarea(indice)" class="enlace-eliminar">&times;</a> -->
+                </li>
+            </ul>
+    </div>
 </div>

@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { APP_BASE_HREF } from '@angular/common';
+import { ReactiveFormsModule } from "@angular/forms";
+
 // import { } from '@fortawesome/fontawesome-free';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -20,7 +22,8 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
 
   providers: [
