@@ -1,4 +1,4 @@
-import {TareaPendienteInterface} from '../TareaPendiente/ITareaPendiente'
+import {TareaPendienteInterface} from './ITarea'
 
 export class TareaPendiente implements TareaPendienteInterface{
     

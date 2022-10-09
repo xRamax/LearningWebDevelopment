@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 // import { TareaPendiente} from 'src/app/models/TareaPendiente/TareaPendiente';
-import { TareaPendienteInterface, TareasPendientes} from 'src/app/models/TareaPendiente/ITareaPendiente';
-import { TareaService } from 'src/app/services/tarea.service';
+import { ITarea, Tareas} from 'src/app/models/TareaPendiente/ITarea';
+import { MockTareasService } from 'src/app/services/mock-tareas.service';
 import { FormGroup, FormControl, Validators } from "@angular/forms";
 
 
@@ -12,7 +12,7 @@ import { FormGroup, FormControl, Validators } from "@angular/forms";
 })
 export class TaskListComponent implements OnInit {
 
-  constructor(private tareasService: TareaService) { }
+  constructor(private tareasService: MockTareasService) { }
 
   ngOnInit(): void {
 
@@ -21,28 +21,36 @@ export class TaskListComponent implements OnInit {
 
   //Variables
   nombreTarea = "";
-  tareas: TareaPendienteInterface[] = [];
+  tareas: ITarea[]   | null = null;
+
+  //Fecha
+  date = new Date()
 
   //Formularios
   FormRegistro = new FormGroup({
+    Id: new FormControl(0),
     Nombre: new FormControl(''),
     Terminada: new FormControl(false),
     });
 
-  // PostTarea(Nombre:string){
+  
+  //Eventos
+
+  GetTareas(){
+    this.tareasService.get().subscribe((res:ITarea[]) => {
+      this.tareas = res;
+    });
+  } 
+
+  // PostTarea(){
+
 
   //   const itemCopy = {...this.FormRegistro.value};
+
   //   this.tareasService.post(itemCopy).subscribe((res:any) => {
 
   //     alert("Tarea Guardada")
   //   });
   // }
-
-  GetTareas(){
-    this.tareasService.get().subscribe((res:TareaPendienteInterface[]) => {
-      this.tareas = res;
-    });
-
-  }
 
 }
